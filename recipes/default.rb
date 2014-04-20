@@ -17,6 +17,10 @@
 # limitations under the License.
 #
 
+if node[:perl][:cpanm][:url].nil?
+	node.set[:perl][:cpanm][:url] = "https://raw.github.com/miyagawa/cpanminus/#{node[:perl][:cpanm][:version]}/cpanm"
+end
+
 unless node['platform'] == 'windows'
 	node['perl']['packages'].each do |perl_pkg|
 	  package perl_pkg

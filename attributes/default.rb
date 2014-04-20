@@ -44,8 +44,9 @@ else
   default['perl']['packages'] = %w{ perl libperl-dev }
 end
 
-default['perl']['cpanm']['url'] = 'https://raw.github.com/miyagawa/cpanminus/1.5015/cpanm'
-default['perl']['cpanm']['checksum'] = '8cb7b62b55a3043c4ccb'
+default[:perl][:cpanm][:version] = '1.6921'
+default['perl']['cpanm']['url'] = nil # 'https://raw.github.com/miyagawa/cpanminus/1.5015/cpanm'
+default['perl']['cpanm']['checksum'] = '9b80a03ffd53483a205198c7c4825a14549b7bd4846c24d9c04cb5af28dff25c' # '8cb7b62b55a3043c4ccb'
 default['perl']['cpanm']['path'] = '/usr/local/bin/cpanm'
 
 default['perl']['install_dir'] = 'C:\\perl\\'
